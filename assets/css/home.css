@@ -1,0 +1,182 @@
+/* home.css */
+
+/* Reset some basics */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Carousel */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    height: 100vh;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: #dc3545; /* Bootstrap danger red */
+}
+
+/* Section Titles */
+h4.text-danger {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Underlines */
+.underlines,
+.underline {
+    width: 60px;
+    height: 4px;
+    background-color: #dc3545;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* Artist Card */
+.owl-carousel .item {
+    padding: 10px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.equalizer {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.equalizer .bar {
+    width: 5px;
+    height: 20px;
+    background-color: #dc3545;
+    margin: 0 2px;
+    animation: bounce 1s infinite ease-in-out;
+    border-radius: 2px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(1.5);
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #dc3545;
+}
+
+.card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Latest Posts Cards */
+.card.bg-dark {
+    background-color: #1a1a1a !important;
+    border-radius: 12px;
+}
+
+.card-header {
+    border-bottom: none;
+    padding: 0.75rem 1rem;
+}
+
+.card-header img {
+    object-fit: cover;
+}
+
+.card-body p {
+    white-space: pre-wrap; /* preserve line breaks */
+}
+
+/* About Us Section */
+section.bg-dark p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card img {
+        height: 150px;
+    }
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+        height: 50vh;
+    }
+    .social-icons a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    h4.text-danger {
+        font-size: 1.5rem;
+    }
+    .equalizer .bar {
+        width: 4px;
+        height: 15px;
+    }
+}
